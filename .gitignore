@@ -1,0 +1,7 @@
+tests451/
+printfTester/
+libftprintf.a
+printfTester
+*.out
+*.code-workspace
+main.c
