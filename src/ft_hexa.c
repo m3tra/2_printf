@@ -40,7 +40,7 @@ int	ft_conv_hexa(unsigned int x, int lower, t_flags *flags)
 		count += ft_print(temp, flags);
 	if (flags->dot >= 0)
 		(void)((flags->width -= flags->dot || 1)
-			&& ((count += ft_putwidth(flags->width, 0, 0)) || 1));
+				&& ((count += ft_putwidth(flags->width, 0, 0)) || 1));
 	else
 		count += ft_putwidth(flags->width, ft_strlen(temp), flags->zero);
 	if (!flags->minus)
