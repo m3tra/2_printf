@@ -6,7 +6,7 @@
 /*   By: fporto <fporto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 19:29:49 by fporto            #+#    #+#             */
-/*   Updated: 2021/08/17 19:29:49 by fporto           ###   ########.fr       */
+/*   Updated: 2021/08/21 17:43:50 by fporto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,6 @@ int	ft_printf(const char *input, ...)
 	count = 0;
 	count += ft_parse_temp(temp, args);
 	va_end(args);
-	free(temp);
+	free((char *)temp);
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: fporto <fporto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 19:29:38 by fporto            #+#    #+#             */
-/*   Updated: 2021/08/17 19:29:39 by fporto           ###   ########.fr       */
+/*   Updated: 2021/08/21 20:37:32 by fporto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,6 @@ int	ft_parse_conv(const char c, t_flags *flags, va_list args)
 	else if (c == 'X')
 		count += ft_conv_hexa(va_arg(args, unsigned int), 0, flags);
 	else if (c == '%')
-	{
-		ft_putchar_fd('%', 1);
-		count++;
-	}
+		count += ft_conv_percent(flags);
 	return (count);
 }

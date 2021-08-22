@@ -6,7 +6,7 @@
 /*   By: fporto <fporto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 19:29:36 by fporto            #+#    #+#             */
-/*   Updated: 2021/08/17 19:29:37 by fporto           ###   ########.fr       */
+/*   Updated: 2021/08/22 01:54:19 by fporto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,17 @@ t_flags	ft_flag_width(t_flags flags)
 	return (flags);
 }
 
-int	ft_putwidth(int width, int minus, int zero)
+int	ft_putwidth(int width, int minus, int zero, int *neg)
 {
 	int	count;
 
 	count = 0;
+	if (neg && *neg && width > minus && zero)
+	{
+		ft_putchar_fd('-', 1);
+		*neg = 0;
+		count++;
+	}
 	while (width > minus)
 	{
 		if (zero)

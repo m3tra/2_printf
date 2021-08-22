@@ -6,7 +6,7 @@
 /*   By: fporto <fporto@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/17 19:29:51 by fporto            #+#    #+#             */
-/*   Updated: 2021/08/17 19:29:52 by fporto           ###   ########.fr       */
+/*   Updated: 2021/08/21 22:56:17 by fporto           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int		ft_conv_int(long x, t_flags *flags);
 int		ft_conv_ptr(unsigned long long ptr, t_flags *flags);
 int		ft_conv_str(char *str, t_flags *flags);
 int		ft_conv_uint(unsigned int x, t_flags *t_flags);
+int		ft_conv_percent(t_flags *flags);
 
 int		ft_is_conv(char c);
 t_flags	ft_init_flags(void);
@@ -52,6 +53,6 @@ int		ft_flag_dot(const char *temp, int i, t_flags *flags);
 void	ft_flag_minus(t_flags *flags);
 void	ft_flag_digit(char c, t_flags *flags);
 t_flags	ft_flag_width(t_flags flags);
-int		ft_putwidth(int width, int minus, int zero);
+int		ft_putwidth(int width, int minus, int zero, int *neg);
 
 #endif
